@@ -1,0 +1,130 @@
+body{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1fr 100vh;
+    grid-template-areas:  "btns"
+                          "Users";
+}
+/*this is teh css for the modal pop up .*/
+/*this i steh big nodal teh gray transperant that contains our actual modal*/
+.bgmodal{
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /*opacity canno tbe given simple with opcaity because it will not work
+    a way around is using rgba in the background color by using this teh child div will not
+    inherit the porperties of backgroud*/
+
+    position: absolute;
+    top: 0;
+
+    display: flex; 
+    justify-content: center;  /*this is for horizontal*/
+    align-items: center; /*this is for vertical*/
+    display: none;
+}
+
+
+/*This is our actual white modal*/
+.modal-content{
+
+    
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center; /*everything that is inside a div is center*/
+    padding-top: 20px;
+    
+
+    position: relative; /*this is to allow teh x button to stay in this modal other wise it will go with the parent modal position*/
+    
+}
+
+
+
+
+/*This is the css for the bottom itsedl */
+.btns {
+   
+    position: relative;
+    display: inline-block;
+    margin: 1em;
+    padding: 1em 2em;
+    border: 0;
+    border-radius: 30px;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    
+    
+        background-color: #195eae;
+        color: white;
+        
+
+}
+.btns:hover {
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.15);
+    background-color: rgb(169, 176, 196);
+    color: black;
+  }
+
+
+
+  /*this is the css for the input fields inside teh modals*/
+  .modal-inputs{
+
+    display: block;
+    width: 50%;
+    margin: 15px auto;
+
+
+  }
+
+
+
+  /* Modal Close button getting the the + look like an x*/
+  .close{
+      position: absolute;
+      top: 0;
+      right: 14px;
+      font-size: 30px;
+      font-weight: bolder;
+      
+      /*making the + sign rotate to look like an X*/
+      transform: rotate(45deg);
+      cursor: pointer;  /*This will make the cursor to turn into a hand*/
+
+
+  }
+
+
+/*creating design for new user div*/
+  .div-shadow{
+
+
+    text-align:center;
+    color: red;
+   
+    width: fit-content;
+    background-color: rgb(189, 189, 189);
+    margin: 0 1em 1em 0;
+    
+
+}
+
+.div-shadow h2{
+
+    color: blanchedalmond;
+}
+
+#Users{
+
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+
+}

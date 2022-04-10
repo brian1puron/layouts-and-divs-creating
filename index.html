@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learningadddiv</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <div class="app">
+        <button onclick="createDiv()">Make a cube</button>
+    </div>
+
+    <script>
+        function createDiv (){
+            var boxEle = document.createElement('div');
+            var container = document.querySelector('.app');
+            boxEle.style.width = '100px';
+            boxEle.style.height = '100px';
+            boxEle.style.backgroundColor = '#f00';
+            container.appendChild(boxEle);
+        }
+    </script>
+    
+    
+</body>
+</html>
